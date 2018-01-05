@@ -16,7 +16,7 @@ module Svgeez
     def element_attributes(attributes)
       attrs = attributes.scan(/(?:viewBox|xmlns:.+?)=".*?"/m)
 
-      attrs << %(id="#{@file_id}-#{File.basename(@file_path, '.svg').gsub(/['"\s]/, '-')}")
+      attrs << %(id="#{File.basename(@file_path, '.svg').gsub(/['"\s]/, '-')}")
     end
 
     def element_contents(content)
